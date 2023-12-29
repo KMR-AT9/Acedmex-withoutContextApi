@@ -1,0 +1,53 @@
+.pricing-secA
+    padding: 65px 0
+    .heading
+        margin-bottom: 50px
+    .courses-wrap
+        .grid
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 15px 20px
+            .item
+                figure
+                    iframe
+                        width: 100%
+                        aspect-ratio: 2
+                    img
+                        aspect-ratio: 1.8
+                        object-fit: cover
+                figcaption
+                    border: 1px solid $LightBlack
+                    --varspacefig: 12px
+                table
+                    width: 100%
+                    border-collapse: collapse
+                    tr,td,th
+                        padding: 5px
+                        text-align: center
+                        background: $LightGrey
+                        border: 1px solid $White
+                .desc
+                    padding: var( --varspacefig)
+                .explr-btn
+                    margin: var( --varspacefig)
+                    display: block
+                    width: -webkit-fill-available
+                    background: $LightBlack
+                    border: 1px solid $LightBlack
+                    color: $White
+                    font-family: inherit
+                    text-align: center
+                    cursor: pointer
+                    transition: .3s ease-out
+                    &:hover
+                        background: none
+                        color: $LightBlack
+.message-ad-cr
+    position: fixed
+    top: 80px
+    z-index: 12
+    left: 50%
+    translate: -50% 0
+    background: $LightBlack
+    color: $White
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+    padding: 8px 25px

@@ -1,0 +1,143 @@
+.Hammodelpop,.Inquirypop,.Cartpop
+    position: fixed
+    right: 0
+    top: 0
+    bottom: 0
+    background: $LightGrey
+    width: 380px
+    z-index: 10
+    transform: translateX(100%)
+    transition: .5s ease
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 40px
+        padding-top: 100px
+        height: 100%
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 3px
+            background: none
+        &::-webkit-scrollbar-track
+            box-shadow: none
+        &::-webkit-scrollbar-thumb
+            background-color: $Black
+            outline: 0
+        .heading
+            margin-bottom: 25px
+        h3
+            text-align: center
+        ul
+            li
+                a
+                    font-size: 32px
+                    display: inline-block
+                    line-height: 1
+                    color: $LightBlack
+                    font-weight: 500s
+                    transition: .3s ease
+                    position: relative
+                    padding-bottom: 4px
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        height: 2px
+                        width: 0
+                        background: $LightBlack
+                        transition: .3s ease
+                    &.active
+                        &::before
+                            width: 100%
+                &:not(:first-child)
+                    margin-top: 12px
+        .cart-menu
+            li
+                cursor: pointer
+                &:not(.empty-cart)
+                    display: flex
+                    flex-wrap: wrap
+                    background: transparent
+                    border: 1px solid $LightBlack
+                    border-radius: 5px
+                    --vargap: 10px
+                    gap: 0 var(--vargap)
+                    transition: .3s ease-out
+                    &:hover,&.active
+                        background: $LightGrey
+                    img
+                        --varsize: 70px
+                        flex: 0 1 var(--varsize)
+                        width: var(--varsize)
+                        height: 100%auto
+                        object-fit: cover
+                    .pro-info
+                        flex: 1
+                        padding: var(--vargap) 0
+                        .pro-name
+                            font-weight: 600
+                            line-height: 1.5
+                            padding-bottom: 3px
+                        .pro-dura-tim
+                            font-size: 14px
+                            line-height: 1.5
+                    .remv
+                        flex: 0 1 auto
+                        appearance: none
+                        border: none
+                        background: none
+                        cursor: pointer
+                        padding-right: var(--vargap)
+                        svg
+                            --varsvgsize: 25px
+                            height: var(--varsvgsize)
+                            width: var(--varsvgsize)
+                &.empty-cart
+                    svg
+                        height: 65px
+                        width: 65px
+                        display: block
+                        margin: 0 auto
+                    span
+                        display: block
+                        text-align: center
+                        padding-top: 12px
+                        font-weight: 500
+                .desc-cour
+                    font-size: 14px
+                    padding: 0 10px
+                    line-height: 1.5
+                    max-height: 0
+                    overflow: hidden
+                    transition: .5s ease
+                &.active
+                    .desc-cour
+                        padding: 5px 10px
+                        max-height: 200px
+.Cartpop
+    width: 455px
+    background: $White
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    background: #0000007e
+    width: 100%
+    z-index: 9
+    transform: translateX(-100%)
+    transition: .5s ease
+    opacity: 0
+    &.overlay2
+        transition: opacity .5s ease
+    &.is-open
+        transform: translateX(-0%)
+        opacity: 1
+    .close-overlay
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        z-index: 1
